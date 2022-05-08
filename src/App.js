@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Blog from "./components/Blog/Blog";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
@@ -22,6 +23,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="*" element={<NotFound></NotFound>} />
             <Route path="/register" element={<Register />} />
             <Route path="/product/:id" element={<ProductDetails />} />

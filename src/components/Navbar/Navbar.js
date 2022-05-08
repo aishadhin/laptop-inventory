@@ -44,6 +44,11 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li className="nav-item">
+                    <Link to="/blog" className="nav-link active" aria-current="page">
+                      Blog
+                    </Link>
+                  </li>
+                  <li className="nav-item">
                     <span className="nav-link active" aria-current="page">
                       {user.displayName}
                     </span>
