@@ -14,10 +14,10 @@ const ManageProduct = () => {
   },[render])
   return (
     <div className="container">
-      <Link className="btn btn-primary" to="/add-product">
-        Add New PRoduct
+      <Link className="btn btn-primary mt-5 text-center d-block" to="/add-product">
+        Add New Product
       </Link>
-      <div className="row row-cols-1 row-cols-md-4 g-4 mt-5 gx-4">
+      <div className="row row-cols-1 row-cols-md-4 g-4 mt-2 gx-4">
         {products.map((product) => (
           <ManageP key={product._id} product={product} render={render} setRender={setRender}/>
         ))}

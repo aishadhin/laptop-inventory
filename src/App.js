@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import AddProduct from "./components/ManageInventory/AddProduct/AddProduct";
@@ -55,6 +56,7 @@ function App() {
               }
             />
           </Routes>
+          <Footer></Footer>
         </AuthContext>
       </BrowserRouter>
     </div>
