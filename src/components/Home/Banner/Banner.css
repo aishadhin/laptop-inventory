@@ -1,0 +1,11 @@
+.banner{
+    background-image: url(../../../../public/Banner.jpg);
+    padding: 200px 0;
+    text-align: center;
+}
+.banner h1{
+    font-weight: bold;
+    font-size: 60px;
+    color: white;
+    text-transform: uppercase;
+}
