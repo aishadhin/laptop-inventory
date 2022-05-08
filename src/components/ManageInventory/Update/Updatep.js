@@ -14,7 +14,7 @@ const Updatep = () => {
       }
 
     }
-    fetch(`http://localhost:5000/update-laptop/${_id}`,{
+    fetch(`https://powerful-peak-74853.herokuapp.com/update-laptop/${_id}`,{
       method: 'PUT',
       headers: {
         'Accept': 'application/json',
@@ -30,7 +30,7 @@ const Updatep = () => {
   };
   
   useEffect(()=>{
-    fetch(`http://localhost:5000/laptop/${id}`).then(res =>{
+    fetch(`https://powerful-peak-74853.herokuapp.com/laptop/${id}`).then(res =>{
       return res.json();
     }).then(data =>{
       setProduct(data);

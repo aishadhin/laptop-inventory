@@ -6,7 +6,7 @@ const ProductDetails = () => {
   const [product,setProduct] = useState({});
   const {model,seller,price,quantity,desc,img,_id} = product;
   useEffect(()=>{
-    fetch(`http://localhost:5000/laptop/${id}`).then(res =>{
+    fetch(`https://powerful-peak-74853.herokuapp.com/laptop/${id}`).then(res =>{
       return res.json();
     }).then(data =>{
       setProduct(data);

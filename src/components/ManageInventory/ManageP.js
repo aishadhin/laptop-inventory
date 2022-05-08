@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ManageP = ({product,render,setRender}) => {
   const {model,quantity,img,desc,price,_id} = product;
   const deleteHandler = (id)=>{
-    fetch(`http://localhost:5000/delete/${id}`,{
+    fetch(`https://powerful-peak-74853.herokuapp.com/delete/${id}`,{
       method:"DELETE",
     }).then(res => res.json()).then(data =>{
       if(data.deletedCount == 1){
@@ -14,7 +14,7 @@ const ManageP = ({product,render,setRender}) => {
 }
   const updateHandler = (id)=>{
     if(+quantity > 0){
-      fetch(`http://localhost:5000/update-quantity/${id}`,{
+      fetch(`https://powerful-peak-74853.herokuapp.com/update-quantity/${id}`,{
         method:"PUT",
       }).then(res => res.json()).then(data =>{
         if(data.acknowledged){

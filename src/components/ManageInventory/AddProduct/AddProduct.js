@@ -7,7 +7,7 @@ const AddProduct = () => {
     if(data.quantity < 1 || data.price < 1){
         alert("quantity Or Price cannot be 0 or negative")
     }else{
-        fetch("http://localhost:5000/add-laptop",{
+        fetch("https://powerful-peak-74853.herokuapp.com/add-laptop",{
             method: 'POST',
             headers: {
               'Accept': 'application/json',

@@ -6,7 +6,7 @@ const ManageProduct = () => {
   const [render,setRender] = useState(true);
   const [products,setProducts] = useState([]);
   useEffect(()=>{
-    fetch("http://localhost:5000/get-laptops").then(res =>{
+    fetch("https://powerful-peak-74853.herokuapp.com/get-laptops").then(res =>{
       return res.json();
     }).then(data =>{
       setProducts(data);

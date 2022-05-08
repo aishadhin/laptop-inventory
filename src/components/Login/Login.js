@@ -1,14 +1,17 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 const Login = () => {
   const { LoginUser, googleLogin, error } = useAuth();
   const { register, handleSubmit } = useForm();
   const Navigate = useNavigate();
+  const location = useLocation();
+  let {from} = location.state;
+  const redirectUrl = from?.pathname || "/";
   const onSubmit = (data) => {
     const { email, password } = data;
-    LoginUser(email, password, Navigate, "/");
+    LoginUser(email, password, Navigate, redirectUrl);
   };
   return (
     <div className="container mx-auto my-5 ">
@@ -43,7 +46,7 @@ const Login = () => {
           <div>
             <button
               className="btn btn-secondary my-2"
-              onClick={() => googleLogin(Navigate, "/")}
+              onClick={() => googleLogin(Navigate, redirectUrl)}
             >
               Login With Google
             </button>
