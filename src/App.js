@@ -4,6 +4,7 @@ import Login from "./components/Login/Login";
 import AddProduct from "./components/ManageInventory/AddProduct/AddProduct";
 import ManageProduct from "./components/ManageInventory/ManageProduct";
 import Updatep from "./components/ManageInventory/Update/Updatep";
+import Myitems from "./components/My-Items/Myitems";
 import Navbar from "./components/Navbar/Navbar";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import ProductDetails from "./components/Products/ProductDetails/ProductDetails";
@@ -42,6 +43,14 @@ function App() {
               element={
                 <PrivateRoute>
                 <AddProduct/>
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/my-product"
+              element={
+                <PrivateRoute>
+                <Myitems/>
                 </PrivateRoute>
               }
             />

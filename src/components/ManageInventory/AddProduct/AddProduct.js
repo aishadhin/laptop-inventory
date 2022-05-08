@@ -1,9 +1,11 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import useAuth from "../../../hooks/useAuth";
 const AddProduct = () => {
   const { register, handleSubmit,reset } = useForm();
+  const {user} = useAuth();
   const onSubmit = (data) => {
-    console.log(data);
+    data.email = user.email;
     if(data.quantity < 1 || data.price < 1){
         alert("quantity Or Price cannot be 0 or negative")
     }else{

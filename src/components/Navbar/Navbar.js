@@ -32,7 +32,6 @@ const Navbar = () => {
                 <Link to="/manage-inventory" className="nav-link active" aria-current="page">
                   Manage Inventory
                 </Link>
-                
               </li>
 
               {user ? (
@@ -44,14 +43,10 @@ const Navbar = () => {
                     </span>
                   </li>
                   <li className="nav-item">
-                    <Link
-                      to="/manage-inventory"
-                      className="nav-link active"
-                      aria-current="page"
-                    >
-                      Manage Inventory
-                    </Link>
-                  </li>
+                <Link to="/my-product" className="nav-link active" aria-current="page">
+                  My Items
+                </Link>
+              </li>
                   <li className="nav-item">
                     <button className="nav-link active" aria-current="page" onClick={LogOut}>
                       LogOut
