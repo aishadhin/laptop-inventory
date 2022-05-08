@@ -3,7 +3,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <div className='container'>
-            <h2 className='text-center text-primary mt-3 mb-5'>Question Answer</h2>
+            <h2 className='text-center text-primary mt-3 mb-5'>Question and Answer</h2>
             <div className='mt-5'>
                 <h3>Difference between Node.JS and Javascript</h3>
                 <p>JavaScript is a scripting language and NodeJS is a JavaScript runtime environment based on google chrome V8 engine. The raw JS can run in the browsers only where NodeJS can run JS outside of the browser.</p>
