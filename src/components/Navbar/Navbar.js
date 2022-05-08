@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 const Navbar = () => {
-  const { user,LogOut } = useAuth();
+  const { user, LogOut } = useAuth();
   return (
     <div>
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
@@ -26,7 +26,7 @@ const Navbar = () => {
                 <Link to="/" className="nav-link active" aria-current="page">
                   Home
                 </Link>
-                
+
               </li>
               <li className="nav-item">
                 <Link to="/manage-inventory" className="nav-link active" aria-current="page">
@@ -37,18 +37,19 @@ const Navbar = () => {
               {user ? (
                 <>
                   {" "}
+
+                  <li className="nav-item">
+                    <Link to="/my-product" className="nav-link active" aria-current="page">
+                      My Items
+                    </Link>
+                  </li>
                   <li className="nav-item">
                     <span className="nav-link active" aria-current="page">
                       {user.displayName}
                     </span>
                   </li>
                   <li className="nav-item">
-                <Link to="/my-product" className="nav-link active" aria-current="page">
-                  My Items
-                </Link>
-              </li>
-                  <li className="nav-item">
-                    <button className="nav-link active" aria-current="page" onClick={LogOut}>
+                    <button className="btn btn-primary nav-link active" aria-current="page" onClick={LogOut}>
                       LogOut
                     </button>
                   </li>
