@@ -8,8 +8,11 @@ const Register = () => {
      const { SignUpUser, error, googleLogin } = useAuth();
      const navigate = useNavigate();
      const location = useLocation();
-     let {from} = location.state;
-  const redirectUrl = from?.pathname || "/";
+     let redirectUrl ="/";
+  if(location?.state){
+    let {from} = location?.state;
+    redirectUrl =  from?.pathname || "/";
+  }
      const onSubmit = (data) => {
        SignUpUser(data.email,data.password,navigate,redirectUrl);
      };

@@ -7,8 +7,13 @@ const Login = () => {
   const { register, handleSubmit } = useForm();
   const Navigate = useNavigate();
   const location = useLocation();
-  let {from} = location.state;
-  const redirectUrl = from?.pathname || "/";
+  let redirectUrl ="/";
+  if(location?.state){
+    let {from} = location?.state;
+    redirectUrl =  from?.pathname || "/";
+  }
+  
+  
   const onSubmit = (data) => {
     const { email, password } = data;
     LoginUser(email, password, Navigate, redirectUrl);
