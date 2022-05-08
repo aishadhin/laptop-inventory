@@ -7,6 +7,7 @@ import ManageProduct from "./components/ManageInventory/ManageProduct";
 import Updatep from "./components/ManageInventory/Update/Updatep";
 import Myitems from "./components/My-Items/Myitems";
 import Navbar from "./components/Navbar/Navbar";
+import NotFound from "./components/NotFound/NotFound";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import ProductDetails from "./components/Products/ProductDetails/ProductDetails";
 import Register from "./components/Register/Register";
@@ -21,6 +22,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="*" element={<NotFound></NotFound>} />
             <Route path="/register" element={<Register />} />
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route
